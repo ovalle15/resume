@@ -7,25 +7,83 @@
   <title>Andrea Ovalle - Web Developer and Customer Support Engineer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
       margin: 20px;
     }
 
-    h1 {
-      color: #333;
+    header, section {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
     }
 
-    h2 {
-      color: #666;
+    h1, h2, h3 {
+      color: #3498db;
+    }
+
+    p {
+      line-height: 1.6;
     }
 
     ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
     }
 
     li {
       margin-bottom: 10px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      position: relative;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: #3498db;
+      transform: translateX(-50%);
+    }
+
+    section h2 {
+      position: relative;
+      z-index: 1;
+      background-color: #fff;
+      padding-right: 20px;
+    }
+
+    section ul {
+      margin-left: 20px;
+    }
+
+    section ul li {
+      position: relative;
+      padding-left: 20px;
+    }
+
+    section ul li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: #3498db;
     }
   </style>
 </head>
@@ -45,12 +103,11 @@
 
     <h3>Labelbox - San Francisco, CA (Remote)</h3>
     <p><strong>Senior Machine Learning Support Engineer (team lead), May 2022 - Current</strong></p>
-    <p><a href="https://labelbox.com/" target="_blank">Labelbox</a> | <a href="https://github.com/Labelbox/labelbox-python"
-        target="_blank">labelbox-python</a></p>
+    <p><a href="https://labelbox.com/" target="_blank">Labelbox</a> | <a
+        href="https://github.com/Labelbox/labelbox-python" target="_blank">labelbox-python</a></p>
     <ul>
       <li>Assumes leadership roles to guide and direct customer solution initiatives.</li>
       <li>Creates engineering solutions for customers seeking to utilize the Labelbox SDK in their pipelines.</li>
-      <!-- Add more bullet points as needed -->
     </ul>
 
     <h3>Dana-Farber Cancer Institute - Data Science, Boston, MA (Hybrid)</h3>
@@ -63,7 +120,6 @@
       <li>Contributed to and maintained a Python code base that generated custom spreadsheets with patient-trial data
       </li>
       <li>Created and deployed Dockerized services in staging and production environments</li>
-      <!-- Add more bullet points as needed -->
     </ul>
   </section>
 
@@ -75,7 +131,6 @@
     <ul>
       <li>Retrieve event and weather information from Ticketmaster, Mapbox, and Weatherstack APIs</li>
       <li>Dockerized application for easy installation</li>
-      <!-- Add more bullet points as needed -->
     </ul>
 
     <h3>Rate Nasa’s astronomy picture of the day API</h3>
@@ -83,7 +138,6 @@
     <ul>
       <li>Use of node, express to implement the API</li>
       <li>Dockerized application for easy installation</li>
-      <!-- Add more bullet points as needed -->
     </ul>
   </section>
 
