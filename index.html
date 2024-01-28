@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrea Ovalle - Web Developer and Customer Support Engineer</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
   <style>
    body {
       font-family: 'Arial', sans-serif;
@@ -184,10 +185,15 @@
     </ul>
   </section>
   <div style="text-align: center; margin-top: 20px;">
-    <a href="data:application/pdf;charset=utf-8,%EF%BB%BF<!DOCTYPE html><html lang='en'>" download="Andrea_Ovalle_Resume.pdf">
-      Download PDF
-    </a>
+    <button onclick="downloadPDF()">Download PDF</button>
   </div>
+
+  <script>
+    function downloadPDF() {
+      var element = document.body;
+      html2pdf(element);
+    }
+  </script>
 
 </body>
 
