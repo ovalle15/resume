@@ -89,6 +89,26 @@
       left: 0;
       color: #61dafb;
     }
+    .download-button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .download-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #61dafb;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #4fa3d1;
+    }
   </style>
 </head>
 
@@ -183,18 +203,20 @@
       <li><strong>Other technologies:</strong> Docker, Jira, DataDog, GCP Logs, Retool, AWS (EC2, S3, AWS amplify) and GCP,
         VSCode, PyCharm, DataGrip, Sublime</li>
     </ul>
+  
   </section>
-  <div style="text-align: center; margin-top: 20px;">
-    <button onclick="downloadPDF()">Download PDF</button>
+  <div>
+    <div class="download-button-container">
+      <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+    </div>
+  
+    <script>
+      function downloadPDF() {
+        var element = document.body;
+        html2pdf(element);
+      }
+    </script>
   </div>
-
-  <script>
-    function downloadPDF() {
-      var element = document.body;
-      html2pdf(element);
-    }
-  </script>
-
 </body>
 
 </html>
